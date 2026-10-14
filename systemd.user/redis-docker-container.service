@@ -1,0 +1,12 @@
+[Unit]
+Description=Start my redis docker container at login
+After=default.target
+
+[Service]
+ExecStart=/usr/bin/docker container start redis-local -a
+ExecStop=/usr/bin/docker stop redis-local
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=default.target
