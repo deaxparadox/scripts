@@ -30,6 +30,8 @@ Single command, writes the key pair to a specific path (no prompts):
 
 ```sh
 ssh-keygen -t ed25519 -C "<email or label>" -f /path/to/destination/<key_name> -N ""
+# 
+#  ssh-keygen -t ed25519 -C "your_email@example.com" -N "your_strong_passphrase" -f ~/.ssh/id_ed25519
 ```
 
 Creates `<key_name>` (private) and `<key_name>.pub` (public). Use a passphrase instead of `-N ""` to protect the key; the `.pub` file is what you add to GitHub / the server.
